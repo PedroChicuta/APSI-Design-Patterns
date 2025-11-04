@@ -21,6 +21,7 @@ class ProductAttributeValue extends Model
 
  
     protected $casts = [
+        'value_text' => 'string',
         'value_number' => 'integer',
         'value_decimal' => 'decimal:2',
         'value_date' => 'date',

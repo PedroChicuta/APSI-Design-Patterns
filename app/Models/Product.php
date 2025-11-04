@@ -19,6 +19,9 @@ class Product extends Model
 
     protected $casts = [
         'price' => 'decimal:2',
+        'name' => 'string',
+        'description' => 'string',
+        'category_id' => 'integer'
     ];
 
     public function category(): BelongsTo
