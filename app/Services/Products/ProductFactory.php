@@ -10,10 +10,9 @@ use Illuminate\Http\Request;
 
 class ProductFactory
 {
-    public static function create(Request $data): ProductBuilderInterface
+    public static function create(array $data): ProductBuilderInterface
     {
         $productCategory = $data['category'];
-
         return match (strtolower($productCategory)) {
             'roupas' => new ProductClothingBuilder(),
             'eletrônicos' => new ProductEletronicBuilder(),
